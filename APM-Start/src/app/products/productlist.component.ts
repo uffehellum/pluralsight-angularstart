@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
+import {StarComponent } from '../shared/star.component'
 
 @Component({
     selector: 'pm-productlist',
     templateUrl: './producttlist.component.html',
-
 })
 export class ProductListComponent {
     imageWidth: number = 50
@@ -34,4 +34,8 @@ export class ProductListComponent {
             
     ]
     toggleImage() { this.showImages = !this.showImages}
+    onRatingClicked(product: any, message: string): void {
+        // alert(message)
+        product.starRating = 5 - product.starRating 
+    }
 }
