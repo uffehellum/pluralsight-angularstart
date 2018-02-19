@@ -31,7 +31,11 @@ export class ProductListComponent {
             p.productName.toLocaleLowerCase().indexOf(this.listFilter) != -1)
     }
     ngOnInit() {
-        this.products = this._productService.getProducts()
-        this.filteredProducts = this.products
+        this._productService.getProducts()
+        .subscribe(data => {
+            this.products = data
+            this.filteredProducts = this.products
+         }, err => console.log(err))
+        
     }
 }
