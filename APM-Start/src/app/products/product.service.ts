@@ -14,7 +14,7 @@ export class ProductService {
     
     getProducts(): Observable<IProduct[]> {
         return this._http.get<IProduct[]>(this._productUrl)
-        .do(data => console.log(data))
+        // .do(data => console.log(data))
         .catch(this.errorhandler)
     }
 

@@ -14,6 +14,7 @@ export class ProductListComponent {
     listFilter: string
     products: IProduct[]
     filteredProducts: IProduct[]
+    errorMessage: string
 
     constructor(private _productService: ProductService) {
     }
@@ -34,8 +35,7 @@ export class ProductListComponent {
         this._productService.getProducts()
         .subscribe(data => {
             this.products = data
-            this.filteredProducts = this.products
-         }, err => console.log(err))
-        
+            this.filteredProducts = data
+        }, err => this.errorMessage = <any>err)        
     }
 }
