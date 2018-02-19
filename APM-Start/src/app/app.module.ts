@@ -11,10 +11,11 @@ import { StarComponent } from './shared/star.component';
   declarations: [ 
     AppComponent, 
     PlusserComponent, 
-    ProductListComponent, 
-    StarComponent 
-  ],
-  imports: [ BrowserModule, FormsModule ],
+    ProductListComponent,
+    StarComponent ],
+  imports: [ 
+    BrowserModule, 
+    FormsModule],
   providers: [],
   bootstrap: [ AppComponent ]
 })
