@@ -4,10 +4,10 @@ import { ProductService } from "./product.service";
 import { IProduct } from "./product";
 
 @Component({
-    selector: 'pm-productlist',
-    templateUrl: './producttlist.component.html',
+    templateUrl: './product-list.component.html',
 })
 export class ProductListComponent {
+    pageTitle: string = 'Produktliste'
     imageWidth: number = 50
     imageMargin: number = 2
     showImages: boolean = false
