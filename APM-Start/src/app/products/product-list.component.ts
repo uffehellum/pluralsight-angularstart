@@ -23,7 +23,7 @@ export class ProductListComponent {
 
     onRatingClicked(product: any, message: string): void {
         // alert(message)
-        product.starRating = 5 - product.starRating 
+        product.starRating = 6 - product.starRating 
     }
 
     performFilter(filter:string) {
