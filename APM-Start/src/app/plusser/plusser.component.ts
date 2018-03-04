@@ -1,16 +1,8 @@
 import { Component } from "@angular/core";
-
+import { NgModel } from '@angular/forms';
 
 @Component({
-    template: `
-    <div>
-        <div class='panel-heading'>
-            {{pageTitle}}
-        </div>
-        {{saldo}}<input [(ngModel)]="saldo">
-        <button (click)="op()">Op</button>
-        <button (click)="ned()">Ned</button>
-    </div>`,
+    templateUrl: 'plusser.component.html',
 })
 export class PlusserComponent {
     pageTitle: 'Plusser'

@@ -5,7 +5,7 @@ import { ProductService } from './products/product.service';
   selector: 'pm-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  providers: [ProductService],
+  providers: [],
 })
 export class AppComponent {
   pageTitle: string = 'Angular: Kom godt igang'

@@ -35,7 +35,8 @@ export class ProductListComponent {
         this._productService.getProducts()
         .subscribe(data => {
             this.products = data
-            this.filteredProducts = data
+            this.performFilter(this.listFilter)
+            // this.filteredProducts = data
         }, err => this.errorMessage = <any>err)        
     }
 }
